@@ -21,5 +21,19 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        User::factory()->admin()->create([
+            'name' => 'Admin User',
+            'email' => 'admin@example.com',
+        ]);
+
+        // Workshop checkpoints: uncomment each line below as you finish the
+        // matching migration + model. If a field doesn't match your schema,
+        // the seeder will fail loudly — that's the point. Run in order,
+        // each one depends on the data the previous one creates.
+        // $this->call(CategorySeeder::class);
+        // $this->call(ProductSeeder::class);
+        // $this->call(CartSeeder::class);
+        // $this->call(OrderSeeder::class);
     }
 }
